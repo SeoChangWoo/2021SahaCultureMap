@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Land
+  - flag1
+  - flag2
+  - flag3
+  - flag4
+  - flag5
+  - flag6
+  - flag7
+  - flag8
+  - flag9
+  - flag10
+  - flag11
+  - flag12
   layers:
   - Default
   - TransparentFX

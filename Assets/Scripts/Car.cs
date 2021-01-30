@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Car : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class Car : MonoBehaviour
     public Vector3 destination;
     public Animator anim;
     public Vector3 offsetCam;
+    public GameObject[] checkUIs;
+
     private void Start()
     {
         Application.targetFrameRate = 300;
     }
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
@@ -46,6 +49,23 @@ public class Car : MonoBehaviour
         {
             isMove = false;
             anim.SetBool("isMove", false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "flag1")
+        {
+            checkUIs[0].SetActive(true);
+        }
+        else if(other.tag == "flag2")
+        {
+        }
+        else if (other.tag == "flag3")
+        {
+        }
+        else if (other.tag == "flag4")
+        {
         }
     }
 }
