@@ -11,6 +11,7 @@ public class Car : MonoBehaviour
     public Animator anim;
     public Vector3 offsetCam;
     public GameObject[] checkUIs;
+    public static bool isFlag;
 
     private void Start()
     {
@@ -18,16 +19,19 @@ public class Car : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (isFlag == false)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Input.GetMouseButton(1))
             {
-                SetDestination(hit.point);
+                RaycastHit hit;
+                if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
+                {
+                    SetDestination(hit.point);
+                }
             }
+            Move();
+            cam.transform.position = transform.position + offsetCam;
         }
-        Move();
-        cam.transform.position = transform.position + offsetCam;
     }
 
     void SetDestination(Vector3 dest)
@@ -56,16 +60,69 @@ public class Car : MonoBehaviour
     {
         if (other.tag == "flag1")
         {
+            isFlag = true;
             checkUIs[0].SetActive(true);
         }
-        else if(other.tag == "flag2")
+        if(other.tag == "flag2")
         {
+            isFlag = true;
+            checkUIs[1].SetActive(true);
         }
-        else if (other.tag == "flag3")
+        if (other.tag == "flag3")
         {
+            isFlag = true;
+            checkUIs[2].SetActive(true);
         }
-        else if (other.tag == "flag4")
+        if (other.tag == "flag4")
         {
+            isFlag = true;
+            checkUIs[3].SetActive(true);
         }
+        if (other.tag == "flag5")
+        {
+            isFlag = true;
+            checkUIs[4].SetActive(true);
+        }
+        if (other.tag == "flag6")
+        {
+            isFlag = true;
+            checkUIs[5].SetActive(true);
+        }
+        if (other.tag == "flag7")
+        {
+            isFlag = true;
+            checkUIs[6].SetActive(true);
+        }
+        if (other.tag == "flag8")
+        {
+            isFlag = true;
+            checkUIs[7].SetActive(true);
+        }
+        if (other.tag == "flag9")
+        {
+            isFlag = true;
+            checkUIs[8].SetActive(true);
+        }
+        if (other.tag == "flag10")
+        {
+            isFlag = true;
+            checkUIs[9].SetActive(true);
+        }
+        if (other.tag == "flag11")
+        {
+            isFlag = true;
+            checkUIs[10].SetActive(true);
+        }
+        if (other.tag == "flag12")
+        {
+            isFlag = true;
+            checkUIs[11].SetActive(true);
+        }
+        if (other.tag == "flag13")
+        {
+            isFlag = true;
+            checkUIs[12].SetActive(true);
+        }
+
     }
 }

@@ -17,6 +17,7 @@ TagManager:
   - flag10
   - flag11
   - flag12
+  - flag13
   layers:
   - Default
   - TransparentFX
