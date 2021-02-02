@@ -123,6 +123,5 @@ public class Car : MonoBehaviour
             isFlag = true;
             checkUIs[12].SetActive(true);
         }
-
     }
 }

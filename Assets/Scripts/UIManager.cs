@@ -12,6 +12,12 @@ public class UIManager : MonoBehaviour
     public Text[] labelTexts;
     public GameObject[] flags;
     public GameObject[] explains;
+    public GameObject guidePanel;
+
+    public void CloseGuideButton()
+    {
+        guidePanel.SetActive(false);
+    }
 
     public void BackScene()
     {
