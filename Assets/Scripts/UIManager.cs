@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject[] flags;
     public GameObject[] explains;
     public GameObject guidePanel;
+    public GameObject[] resultPanel;
 
     public void CloseGuideButton()
     {
@@ -52,176 +53,207 @@ public class UIManager : MonoBehaviour
 
     public void YesCulture1()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkMarks[0].isOn = true;
         checkUIs[0].SetActive(false);
         flags[0].GetComponent<BoxCollider>().enabled = false;
-        explains[0].SetActive(true);
+        StartCoroutine(ExplainPanelShow(0, 0));        
     }
     public void YesCulture2()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkMarks[1].isOn = true;
         checkUIs[1].SetActive(false);
         flags[1].GetComponent<BoxCollider>().enabled = false;
-        explains[1].SetActive(true);
+        StartCoroutine(ExplainPanelShow(1, 0));
     }
     public void YesCulture3()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkMarks[2].isOn = true;
         checkUIs[2].SetActive(false);
         flags[2].GetComponent<BoxCollider>().enabled = false;
-        explains[2].SetActive(true);
+        StartCoroutine(ExplainPanelShow(2, 0));
     }
     public void YesCulture4()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkMarks[3].isOn = true;
         checkUIs[3].SetActive(false);
         flags[3].GetComponent<BoxCollider>().enabled = false;
         explains[3].SetActive(true);
+        StartCoroutine(ExplainPanelShow(3, 0));
     }
 
     public void YesCulture5()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[4].SetActive(false);
-        explains[4].SetActive(true);
+        StartCoroutine(ExplainPanelShow(4, 1));
     }
     public void YesCulture6()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[5].SetActive(false);
-        explains[5].SetActive(true);
+        StartCoroutine(ExplainPanelShow(5, 1));
     }
     public void YesCulture7()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[6].SetActive(false);
-        explains[6].SetActive(true);
+        StartCoroutine(ExplainPanelShow(6, 1));
     }
     public void YesCulture8()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[7].SetActive(false);
-        explains[7].SetActive(true);
+        StartCoroutine(ExplainPanelShow(7, 1));
     }
     public void YesCulture9()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[8].SetActive(false);
-        explains[8].SetActive(true);
+        StartCoroutine(ExplainPanelShow(8, 1));
     }
     public void YesCulture10()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[9].SetActive(false);
-        explains[9].SetActive(true);
+        StartCoroutine(ExplainPanelShow(9, 1));
     }
     public void YesCulture11()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[10].SetActive(false);
-        explains[10].SetActive(true);
+        StartCoroutine(ExplainPanelShow(10, 1));
     }
     public void YesCulture12()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[11].SetActive(false);
-        explains[11].SetActive(true);
+        StartCoroutine(ExplainPanelShow(11, 1));
     }
     public void YesCulture13()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[12].SetActive(false);
-        explains[12].SetActive(true);
+        StartCoroutine(ExplainPanelShow(12, 1));
     }
 
 
 
     public void NoCulture1()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[0].SetActive(false);
+        StartCoroutine(ExplainPanelShow(0, 1));
     }
     public void NoCulture2()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[1].SetActive(false);
+        StartCoroutine(ExplainPanelShow(1, 1));
     }
     public void NoCulture3()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[2].SetActive(false);
+        StartCoroutine(ExplainPanelShow(2, 1));
     }
     public void NoCulture4()
     {
+        Invoke("FalseImage", 0.9f);
         Car.isFlag = false;
         checkUIs[3].SetActive(false);
+        StartCoroutine(ExplainPanelShow(3, 1));
     }
     public void NoCulture5()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[4].SetActive(false);
         flags[4].GetComponent<BoxCollider>().enabled = false;
-        explains[4].SetActive(true);
+        StartCoroutine(ExplainPanelShow(4, 0));
     }
     public void NoCulture6()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[5].SetActive(false);
         flags[5].GetComponent<BoxCollider>().enabled = false;
-        explains[5].SetActive(true);
+        StartCoroutine(ExplainPanelShow(5, 0));
     }
     public void NoCulture7()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[6].SetActive(false);
         flags[6].GetComponent<BoxCollider>().enabled = false;
-        explains[6].SetActive(true);
+        StartCoroutine(ExplainPanelShow(6, 0));
     }
     public void NoCulture8()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[7].SetActive(false);
         flags[7].GetComponent<BoxCollider>().enabled = false;
-        explains[7].SetActive(true);
+        StartCoroutine(ExplainPanelShow(7, 0));
     }
     public void NoCulture9()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[8].SetActive(false);
         flags[8].GetComponent<BoxCollider>().enabled = false;
-        explains[8].SetActive(true);
+        StartCoroutine(ExplainPanelShow(8, 0));
     }
     public void NoCulture10()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[9].SetActive(false);
         flags[9].GetComponent<BoxCollider>().enabled = false;
-        explains[9].SetActive(true);
+        StartCoroutine(ExplainPanelShow(9, 0));
     }
     public void NoCulture11()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[10].SetActive(false);
         flags[10].GetComponent<BoxCollider>().enabled = false;
-        explains[10].SetActive(true);
+        StartCoroutine(ExplainPanelShow(10, 0));
     }
     public void NoCulture12()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[11].SetActive(false);
         flags[11].GetComponent<BoxCollider>().enabled = false;
-        explains[11].SetActive(true);
+        StartCoroutine(ExplainPanelShow(11, 0));
     }
     public void NoCulture13()
     {
+        Invoke("TrueImage", 0.9f);
         Car.isFlag = false;
         checkUIs[12].SetActive(false);
         flags[12].GetComponent<BoxCollider>().enabled = false;
-        explains[12].SetActive(true);
+        StartCoroutine(ExplainPanelShow(12, 0));
     }
 
 
@@ -276,5 +308,22 @@ public class UIManager : MonoBehaviour
     public void HideExplain13()
     {
         explains[12].SetActive(false);
+    }
+
+    IEnumerator ExplainPanelShow(int i, int x)
+    {
+        yield return new WaitForSeconds(4f);
+        resultPanel[x].SetActive(false);
+        explains[i].SetActive(true);
+    }
+
+    public void TrueImage()
+    {
+        resultPanel[0].SetActive(true);
+    }
+
+    public void FalseImage()
+    {
+        resultPanel[1].SetActive(true);
     }
 }
